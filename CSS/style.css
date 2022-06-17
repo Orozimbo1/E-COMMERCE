@@ -1,0 +1,43 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #EFEFEF;
+    font-family: 'Bebas Neue', "cursive";
+    font-family: 'Montserrat', sans-serif
+}
+
+.faixa{
+    height: 5vh;
+    background-color: #535151;
+}
+
+button{
+    border: none;
+}
+
+footer{
+    height: auto;
+}
+
+li{
+    list-style-type: none;
+}
+
+.ofert_email{
+    border: none;
+    height: 5vh;
+    width: 30vw;
+    background-color: #F50057;
+    text-align: center;
+    color: white;
+}
+
+.inscript{
+    height: 5vh;
+    background-color: white;
+    width: 30vw;
+}
