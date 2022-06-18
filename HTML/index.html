@@ -7,6 +7,9 @@
     <title>OnlineShop</title>
 
     <!--FONTES EXTERNAS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     
     <!--CSS EXTERNO-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -20,17 +23,17 @@
     <div class="col">
         <header>
             <div class=" faixa"></div>
-            <div class="d-flex justify-content-center m-3">
+            <div class="d-flex justify-content-center p-3 container-fluid shadow">
                 <img src="../IMAGENS/Logo.png" alt="imagem de logo escrito (onlineshop) seguido de uma bolsa com rodinhas e um simbolo de verificado fazendo a alusão de um carrinho de compras em alta velocidade">
             </div>
-            <div class="container ">
-                <ul class="nav navbar">
-                    <li><button>HOME</button></li>
-                    <li><button>COMPRAR</button></li>
-                    <li><button>VENDER</button></li>
-                    <li><button>CONTATO</button></li>
-                    <li><button><img src="../IMAGENS/Carrinho de Compra.png" alt="imagem de um carrinho de compras indicando a pagina (minhas compras)"></button></li>
-                    <li><button><img src="../IMAGENS/lar.png" alt="imagem em formato de uma casa indicando o (perfil do usuário)"></a></button></li>
+            <div class="container-fluid">
+                <ul class="nav navbar justify-content-around">
+                    <li><button class="bg-transparent btnNav efect text">HOME</button></li>
+                    <li><button class="bg-transparent btnNav efect">COMPRAR</button></li>
+                    <li><button class="bg-transparent btnNav efect">VENDER</button></li>
+                    <li><button class="bg-transparent btnNav efect">CONTATO</button></li>
+                    <li><button class="bg-transparent btnNav efect"><img src="../IMAGENS/Carrinho de Compra.png" alt="imagem de um carrinho de compras indicando a pagina (minhas compras)"></button></li>
+                    <li><button class="bg-transparent btnNav efect"><img src="../IMAGENS/lar.png" alt="imagem em formato de uma casa indicando o (perfil do usuário)"></a></button></li>
                 </ul>
             </div>
 
@@ -38,28 +41,27 @@
         <main>
     
         </main>
-        <footer class="d-flex faixa justify-content-around">
+        <footer class="d-flex justify-content-around pt-3">
             <div>
-                <h4>Nos siga nas Redes</h4>
-                <ul>
-                    <li>face</li>
-                    <li>insta</li>
-                    <li>youtube</li>
-                    <li>twiter</li>
+                <h4 class="text-white pb-3">Nos siga nas Redes</h4>
+                <ul class="p-0">
+                    <li class="p-1"><a href="https://www.facebook.com" target="_blank" class="text-white"><img src="../IMAGENS/facebook.png" alt="logo do facebook" class="png"> OnlineShop</a></li>
+
+                    <li class="p-1"><a href="https://www.instagram.com" target="_blank" class="text-white"><img src="../IMAGENS/instagram.png" alt="logo do instagram" class="png"> @OnlineShop</a></li>
                 </ul>
             </div>
             <div class="text-center ">
                 <ul>
-                    <li><h4>Receba Ofertas</h4></li>
-                    <li><input type="text" class="ofert_email" value="Coloque seu email aqui"></li>
-                    <li><button class="faixa inscript">Se Increva</button></li>
-                    <li><p>&copy;Tera</p></li>
+                    <li class="text-white pb-3"><h4>Receba Ofertas</h4></li>
+                    <li><input type="text" class="ofert_email mb-2 shadow-lg" value="Coloque seu email aqui" id="ofert_email"></li>
+                    <li><button class="register mb-3 shadow-lg" id="register">Se Increva</button></li>
+                    <li><p class="text-white">&copy;Tera</p></li>
                 </ul>    
             </div>
             <div>
-                <ul>
-                    <li><h4>Fale Conosco</h4></li>
-                    <li><h6>(xx)x xxxx-xxxxx</h6></li>
+                <ul class="text-white">
+                    <li class="pb-3"><h4>Fale Conosco</h4></li>
+                    <li><h6>(12) 0800 000 0000</h6></li>
                     <li><h6>contato@contato.com</h6></li>
                 </ul>
             </div>

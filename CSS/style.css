@@ -7,8 +7,42 @@
 body{
     background-color: #EFEFEF;
     font-family: 'Bebas Neue', "cursive";
-    font-family: 'Montserrat', sans-serif
 }
+
+header{
+    font-size: 1.4em;
+}
+
+.btnNav{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* hover navbar */
+
+.btnNav::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    background-color: #f7cfcf;
+    z-index: -1;
+}
+
+.efect::before{
+    width: 0;
+    top: 0;
+    left: 0;
+}
+
+.efect:hover::before{
+    width: 100%;
+}
+
+/*  */
 
 .faixa{
     height: 5vh;
@@ -19,25 +53,44 @@ button{
     border: none;
 }
 
+main{
+    height: 40vh;
+    background-color: white;
+}
+
 footer{
     height: auto;
+    background-color: #535151;
+    font-size: 1.2em;
 }
 
 li{
     list-style-type: none;
 }
 
+.png{
+    height: 5vh;
+    background-color: #535151;
+}
+
+a{
+    text-decoration: none;
+}
+
 .ofert_email{
     border: none;
     height: 5vh;
     width: 30vw;
-    background-color: #F50057;
+    background-color: #f7cfcf;
     text-align: center;
-    color: white;
+    color: rgba(20, 4, 4, 0.623);
+    border-radius: 5px;
 }
 
-.inscript{
+.register{
     height: 5vh;
-    background-color: white;
+    background-color: #ff002bfd;
     width: 30vw;
+    color: white;
+    border-radius: 5px;
 }
