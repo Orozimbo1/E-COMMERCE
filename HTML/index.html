@@ -20,50 +20,163 @@
 </head>
 <body>
 
-    <div class="col">
+    <!--PAGINA DE LOGIN-->
+
+    <div class="ocult vh-100" id="pageLogin">
+        <section class="login d-flex position-relative">
+            <svg onclick="paginaHome()" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-x-square-fill exit" viewBox="0 0 16 16" >
+                <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/>
+            </svg>
+            <div class="d-flex col-4 bg-light justify-content-center flex-column cardLogCad m-auto ">
+                
+                <div class="d-flex justify-content-center align-content-center position-relative">
+                    <h1 class="font title link-secondary mt-5">Login</h1>
+                    
+                </div>
+                <div class="d-flex justify-content-center">
+                    <form class="d-flex  flex-column mt-4 mb-2 col-8">
+                        <label for="email" class="font">Email:</label>
+                        <input type="email" name="email" id="authEmail" class="ofert_email col-12 text-black ">
+                        <label for="password" class="font mt-3">Password:</label>
+                        <input type="password" name="password" id="authPassword" class="ofert_email mb-2 text-black">
+                        <a href="#" class=" link-secondary text-center">Esqueceu sua senha</a>
+                    </form>
+                </div>
+                <div class="d-flex col-12 justify-content-center mt-5">
+                    <button class="font btn btn-danger col-8 register">Continuar</button>
+                </div>
+                <a href="#" onclick="paginaCadastro()" class="link-secondary text-center mt-2 mb-4">Não tem uma conta?<strong>Cadastre-se</strong></a>
+            </div>
+        </section>
+    </div>
+
+    <!--PAGINA DE CADASTRO-->
+
+    <div class="ocult vh-100" id="pageRegister">
+        <section class="login d-flex position-relative">
+            <svg onclick="paginaHome()" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-x-square-fill exit" viewBox="0 0 16 16">
+                <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/>
+            </svg>
+            <div class="d-flex bg-light justify-content-center flex-column cardLogCad m-auto col-8">
+                
+                <div class="d-flex justify-content-center align-content-center position-relative">
+                    <h1 class="font title link-secondary mt-5">Cadastre-se</h1>
+                    
+                </div>
+                <div class="d-flex justify-content-around">
+                    <form class="d-flex  flex-column mt-4 col-5 ">
+                        <label for="Nome" class="font">Nome:</label>
+                        <input type="text" name="Nome" id="nome" class="ofert_email text-black">  
+                        <label for="Sobrenome" class="font ">Sobrenome:</label>
+                        <input type="text" name="Sobrenome" id="sobrenome" class="ofert_email text-black">
+                        <label for="email" class="font">Email:</label>
+                        <input type="email" name="email" id="Email" class="ofert_email text-black">
+                        <label for="Number" class="font ">Ceular:</label>
+                        <input type="tel" name="tel" id="celular" class="ofert_email text-black">
+                    </form>
+                    <form class="d-flex  flex-column mt-4 col-5 ">
+                        <label for="password" class="font ">Senha:</label>
+                        <input type="password" name="password" id="senha" class="ofert_email text-black">
+                        <label for="password" class="font">Confirme sua senha:</label>
+                        <input type="password" name="confirmSenha" id="confirmSenha" class="ofert_email text-black">
+                        <label for="Cep" class="font">CEP:</label>
+                        <input type="text" name="cep" id="cep" class="ofert_email text-black">
+                        <div class="d-flex  justify-content-start pt-2">
+                            <div class="d-flex flex-column justify-content-center">
+                                <input type="checkbox" name="termos" id="termos" class="">
+                            </div>
+                            <p class="link-secondary p-0 flex-wrap m-2">Li e concordo com os <a href="#" class="link-secondary"><strong>Termos de privacidade</strong></a></p>
+                        </div>
+                    </form>
+                </div>
+                <div class="d-flex col-12 justify-content-center mt-5">
+                    <button class="font btn btn-danger col-6 register">Continuar</button>
+                </div>
+                <a href="#" class="link-secondary text-center mt-2 mb-4">Já tem uma conta?<strong onclick="paginaLogin()">Login-in</strong></a>
+            </div>
+        </section>
+    </div>
+
+    <!--PAGINA PRINCIPAL-->
+
+    <div class="col" id="principalPage">
         <header>
             <div class=" faixa"></div>
             <div class="d-flex justify-content-center p-3 container-fluid shadow">
                 <img src="../IMAGENS/Logo.png" alt="imagem de logo escrito (onlineshop) seguido de uma bolsa com rodinhas e um simbolo de verificado fazendo a alusão de um carrinho de compras em alta velocidade">
             </div>
             <div class="container-fluid">
-                <ul class="nav navbar justify-content-around">
-                    <li><button class="bg-transparent btnNav efect text">HOME</button></li>
-                    <li><button class="bg-transparent btnNav efect">COMPRAR</button></li>
-                    <li><button class="bg-transparent btnNav efect">VENDER</button></li>
-                    <li><button class="bg-transparent btnNav efect">CONTATO</button></li>
-                    <li><button class="bg-transparent btnNav efect"><img src="../IMAGENS/Carrinho de Compra.png" alt="imagem de um carrinho de compras indicando a pagina (minhas compras)"></button></li>
-                    <li><button class="bg-transparent btnNav efect"><img src="../IMAGENS/lar.png" alt="imagem em formato de uma casa indicando o (perfil do usuário)"></a></button></li>
+                <ul class="nav navbar">
+                    <li class="col-2 text-center font"><button class="bg-transparent btnNav efect">NOVIDADES</button></li>
+                    <li class="col-2 text-center font"><button class="bg-transparent btnNav efect">TENDÊNCIA</button></li>
+                    <li class="col-2 text-center font">
+                        <div class="btn-group">
+                            <button class="bg-transparent btnNav efect col-12 font" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            CATEGORIAS
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item ps-4 pt-2 font" href="#">MODA FEMININA</a></li>
+                                <li><a class="dropdown-item ps-4 pt-2 font" href="#">MODA MASCULINA</a></li>
+                                <li><a class="dropdown-item ps-4 pt-2 font" href="#">MODA INFANTIL</a></li>
+                                <li><a class="dropdown-item ps-4 pt-2 font" href="#">MODA PLUS SIZE</a></li>
+                                <li><a class="dropdown-item ps-4 pt-2 font" href="#">ACESSÓRIOS</a></li>
+                                <li><a class="dropdown-item ps-4 pt-2 font" href="#"></a></li>
+                            </ul>
+                        </div>
+                    </li>                    
+                    <li class="col-2 text-center"><button class="bg-transparent btnNav efect font">PROMOÇÃO</button></li>
+                    <li class="col-2 text-center"><button class="bg-transparent btnNav efect font">CONTATO</button></li>
+                    <li class="col-2">
+                        <div class="d-flex col-12 justify-content-evenly">
+
+                            <button class="bg-transparent btnNav efect col-3"><img src="../IMAGENS/Carrinho de Compra.png" alt="imagem de um carrinho de compras indicando a pagina (minhas compras)"></button>
+                            
+                            <div class="btn-group">
+                                <button type="button" class="bg-transparent btnNav efect" data-bs-toggle="dropdown" aria-expanded="false">                                
+                                    <img src="../IMAGENS/lar.png" alt="imagem em formato de uma casa indicando o (perfil do usuário)">  
+                                </button>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item ps-4 pt-2 font" href="#" onclick="paginaLogin()">LOGIN</a></li>
+                                    <li><a class="dropdown-item ps-4 pt-2 font" href="#" onclick="paginaCadastro()">CADASTRE-SE</a></li>
+                                    <li><a class="dropdown-item ps-4 pt-2 font" href="#">VENDA</a></li>
+                                    <li><a class="dropdown-item ps-4 pt-2 font" href="#">MINHAS COMPRAS</a></li>
+                                    <li><a class="dropdown-item ps-4 pt-2 font" href="#">FALE CONOSCO</a></li>
+                                    </ul>
+                            </div>
+                
+                        </div>
+                    </li>
                 </ul>
             </div>
-
         </header>
         <main>
     
         </main>
-        <footer class="d-flex justify-content-around pt-3">
-            <div>
-                <h4 class="text-white pb-3">Nos siga nas Redes</h4>
+        <footer class="d-flex justify-content-around pt-3 col">
+            <div class="col-4 d-flex justify-content-center">
+                <div>
+                    <h4 class="text-white pb-3">Nos siga nas Redes</h4>
                 <ul class="p-0">
                     <li class="p-1"><a href="https://www.facebook.com" target="_blank" class="text-white"><img src="../IMAGENS/facebook.png" alt="logo do facebook" class="png"> OnlineShop</a></li>
 
                     <li class="p-1"><a href="https://www.instagram.com" target="_blank" class="text-white"><img src="../IMAGENS/instagram.png" alt="logo do instagram" class="png"> @OnlineShop</a></li>
                 </ul>
+                </div>
             </div>
-            <div class="text-center ">
+            <div class="text-center col-4">
                 <ul>
                     <li class="text-white pb-3"><h4>Receba Ofertas</h4></li>
-                    <li><input type="text" class="ofert_email mb-2 shadow-lg" value="Coloque seu email aqui" id="ofert_email"></li>
-                    <li><button class="register mb-3 shadow-lg" id="register">Se Increva</button></li>
-                    <li><p class="text-white">&copy;Tera</p></li>
+                    <li><input type="text" class="ofert_email mb-2 shadow-lg col-10 text-center" value="Coloque seu email aqui" id="ofert_email"></li>
+                    <li><button class="btn btn-danger register mb-3 col-10 pt-0 font">se increva</button></li>
+                    <li><p class="text-white">&copy;2022 by Tera</p></li> 
                 </ul>    
             </div>
-            <div>
-                <ul class="text-white">
-                    <li class="pb-3"><h4>Fale Conosco</h4></li>
-                    <li><h6>(12) 0800 000 0000</h6></li>
-                    <li><h6>contato@contato.com</h6></li>
-                </ul>
+            <div class="col-4 d-flex justify-content-center">
+                    <ul class="text-white">
+                        <li class="pb-3"><h4>Fale Conosco</h4></li>
+                        <li><h6>(12) 0800 000 0000</h6></li>
+                        <li><h6>contato@contato.com</h6></li>
+                    </ul>
             </div>
         </footer>
     </div>

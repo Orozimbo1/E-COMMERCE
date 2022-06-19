@@ -4,13 +4,24 @@
     box-sizing: border-box;
 }
 
-body{
-    background-color: #EFEFEF;
+
+.font{    
     font-family: 'Bebas Neue', "cursive";
 }
 
+.ocult{
+    display: none;
+}
+
+
+.faixa{
+    height: 5vh;
+    background-color: #535151;
+}
+
 header{
-    font-size: 1.4em;
+    font-size: 1.2em;
+    background-color: #EFEFEF;
 }
 
 .btnNav{
@@ -28,7 +39,7 @@ header{
 
     position: absolute;
 
-    background-color: #f7cfcf;
+    background-color: #493131;
     z-index: -1;
 }
 
@@ -44,18 +55,32 @@ header{
 
 /*  */
 
-.faixa{
-    height: 5vh;
-    background-color: #535151;
-}
-
 button{
     border: none;
 }
 
-main{
-    height: 40vh;
-    background-color: white;
+.title{
+    font-size: 4rem;
+}
+
+.login {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(45deg, #447280,rgb(67, 149, 163),#053a47);
+}
+
+.cardLogCad{
+    height: auto;
+    border-radius: 5%;
+}
+
+.exit{
+    position: absolute;
+    top: 5vh;
+    left: 3vw;  
+    height: 5vh;
+    width: 2vw;
+    cursor: pointer; 
 }
 
 footer{
@@ -79,18 +104,36 @@ a{
 
 .ofert_email{
     border: none;
-    height: 5vh;
-    width: 30vw;
+    height: 6vh;
     background-color: #f7cfcf;
-    text-align: center;
     color: rgba(20, 4, 4, 0.623);
     border-radius: 5px;
 }
 
 .register{
-    height: 5vh;
-    background-color: #ff002bfd;
-    width: 30vw;
+    height: 6vh;
     color: white;
     border-radius: 5px;
+    font-size: 1.2em;
+}
+
+
+/* meu perfil */
+
+.logo{
+    width: 13vw;
+}
+
+.fotoPerfilBarra{
+    height: 7.5vh;
+    width: 3.5vw;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.fotoPerfil{
+    height: 20vh;
+    width: 10vw;
+    border-radius: 50%;
+    cursor: pointer;
 }

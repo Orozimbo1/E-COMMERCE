@@ -1,5 +1,8 @@
 let ofert_email = document.getElementById("ofert_email")
-let register = document.getElementById("register")
+let principalPage = document.getElementById("principalPage")
+let pageLogin = document.getElementById("pageLogin")
+let pageRegister = document.getElementById("pageRegister")
+
 
 console.log("funcionando");
 
@@ -9,20 +12,26 @@ ofert_email.addEventListener("click", () => {
     ofert_email.value = ""
 })
 
-// efeito temporario
+//Redirecionando pra a pagina de Login
 
-register.addEventListener("mousemove", () => {
-    register.style.backgroundColor = "#f11319fe"
-})
+function paginaLogin() {
+    principalPage.classList.add("ocult")
+    pageRegister.classList.add("ocult")
+    pageLogin.classList.remove("ocult")
+}
 
-register.addEventListener("mouseleave", () => {
-    register.style.backgroundColor = "#ff002bfd"
-})
+//Redirecionando para a pagina de Cadastro
 
-register.addEventListener("mousedown", () => {
-    register.style.backgroundColor = "#ac132cfd"
-})
+function paginaCadastro(){
+    principalPage.classList.add("ocult")
+    pageLogin.classList.add("ocult")
+    pageRegister.classList.remove("ocult")
+}
 
-register.addEventListener("mouseup", () => {
-    register.style.backgroundColor = "#ff002bfd"
-})
+// redirecionando para a pagina Principal
+
+function paginaHome() {
+    principalPage.classList.remove("ocult")
+    pageLogin.classList.add("ocult")
+    pageRegister.classList.add("ocult")
+}
