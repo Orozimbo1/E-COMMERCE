@@ -66,7 +66,11 @@ button{
 .login {
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(45deg, #447280,rgb(67, 149, 163),#053a47);
+    background-image: linear-gradient(45deg, #fa8c8c,rgb(231, 84, 84),#fa8c8c);
+}
+
+.cursor{
+    cursor: pointer;
 }
 
 .cardLogCad{
@@ -108,6 +112,11 @@ a{
     background-color: #f7cfcf;
     color: rgba(20, 4, 4, 0.623);
     border-radius: 5px;
+    padding-left: 1vw;
+}
+
+.ofert_email:focus{
+    outline: 0;
 }
 
 .register{
@@ -141,3 +150,25 @@ a{
 .gambi{
     height: 40Vh;
 }
+
+.bg-perfil{
+    background-image: linear-gradient(45deg, rgb(202, 202, 202),rgb(254, 255, 255),rgb(202, 202, 202));
+}
+
+.altura{
+    height: 50vh;
+}
+
+.input_dados_perfil{
+    border: none;
+    box-shadow: none;
+}
+
+.input_dados_perfil:focus{
+    outline: 0;
+}
+
+.radius-0{
+    border-radius: 0;
+}
+

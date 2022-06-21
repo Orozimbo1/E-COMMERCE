@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OnlineShop</title>
+    <link rel="shortcut icon" href="../IMAGENS/logo.icon.png">
 
     <!--FONTES EXTERNAS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,13 +40,13 @@
                         <input type="email" name="email" id="authEmail" class="ofert_email col-12 text-black ">
                         <label for="password" class="font mt-3">Password:</label>
                         <input type="password" name="password" id="authPassword" class="ofert_email mb-2 text-black">
-                        <a href="#" class=" link-secondary text-center">Esqueceu sua senha</a>
+                        <a href="#" class=" link-secondary text-center fw-bolder">Esqueceu sua senha?</a>
                     </form>
                 </div>
                 <div class="d-flex col-12 justify-content-center mt-5">
                     <button class="font btn btn-danger col-8 register">Continuar</button>
                 </div>
-                <a href="#" onclick="paginaCadastro()" class="link-secondary text-center mt-2 mb-4">Não tem uma conta?<strong>Cadastre-se</strong></a>
+                <p class="link-secondary text-center mt-2 mb-4">Não tem uma conta? <strong onclick="paginaCadastro()" class="cursor">Cadastre-se</strong></p>
             </div>
         </section>
     </div>
@@ -92,7 +93,7 @@
                 <div class="d-flex col-12 justify-content-center mt-5">
                     <button class="font btn btn-danger col-6 register">Continuar</button>
                 </div>
-                <a href="#" class="link-secondary text-center mt-2 mb-4">Já tem uma conta?<strong onclick="paginaLogin()">Login-in</strong></a>
+                <p class="link-secondary text-center mt-2 mb-4">Já tem uma conta? <strong onclick="paginaLogin()" class="cursor">Login-in</strong></p>
             </div>
         </section>
     </div>
@@ -166,8 +167,8 @@
             <div class="text-center col-4">
                 <ul>
                     <li class="text-white pb-3"><h4>Receba Ofertas</h4></li>
-                    <li><input type="text" class="ofert_email mb-2 shadow-lg col-10 text-center" value="Coloque seu email aqui" id="ofert_email"></li>
-                    <li><button class="btn btn-danger register mb-3 col-10 pt-0 font">se increva</button></li>
+                    <li><input type="text" class="ofert_email mb-2 shadow-lg col-10 text-center radius-0" value="Coloque seu email aqui" id="ofert_email"></li>
+                    <li><button class="btn btn-danger register mb-3 col-10 pt-0 font radius-0">se increva</button></li>
                     <li><p class="text-white">&copy;2022 by Tera</p></li> 
                 </ul>    
             </div>
