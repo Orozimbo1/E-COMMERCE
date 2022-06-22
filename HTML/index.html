@@ -23,12 +23,12 @@
 
     <!--PAGINA DE LOGIN-->
 
-    <div class="ocult vh-100" id="pageLogin">
-        <section class="login d-flex position-relative">
+    <div class=" vh-100" id="pageLogin">
+        <section class="login d-flex position-relative h-100">
             <svg onclick="paginaHome()" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-x-square-fill exit" viewBox="0 0 16 16" >
                 <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/>
             </svg>
-            <div class="d-flex col-4 bg-light justify-content-center flex-column cardLogCad m-auto ">
+            <div class="d-flex col-5 bg-light justify-content-center flex-column cardLogCad m-auto ">
                 
                 <div class="d-flex justify-content-center align-content-center position-relative">
                     <h1 class="font title link-secondary mt-5">Login</h1>
@@ -36,15 +36,24 @@
                 </div>
                 <div class="d-flex justify-content-center">
                     <form class="d-flex  flex-column mt-4 mb-2 col-8">
-                        <label for="email" class="font">Email:</label>
-                        <input type="email" name="email" id="authEmail" class="ofert_email col-12 text-black ">
-                        <label for="password" class="font mt-3">Password:</label>
+                        <label for="email" class="font mb-2">Email:</label>
+                        <input type="email" name="email" id="authEmail" class="ofert_email col-12 text-black mb-4">
+                        <label for="password" class="font mb-2">Password:</label>
                         <input type="password" name="password" id="authPassword" class="ofert_email mb-2 text-black">
-                        <a href="#" class=" link-secondary text-center fw-bolder">Esqueceu sua senha?</a>
+                        <div class="ocult" id="erroLogin">
+                            <div class="d-flex justify-content-center align-content-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle m-1 text-danger" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                  </svg>
+                                  <p class="p-0 text-danger">Usuário ou senha incorreta</p>
+                            </div>
+                        </div>
+                        <a href="#" class=" link-secondary text-center fw-bolder mt-2">Esqueceu sua senha?</a>
                     </form>
                 </div>
-                <div class="d-flex col-12 justify-content-center mt-5">
-                    <button class="font btn btn-danger col-8 register">Continuar</button>
+                <div class="d-flex col-12 justify-content-center mt-4">
+                    <button class="font btn btn-danger col-6 register" id="login">Continuar</button>
                 </div>
                 <p class="link-secondary text-center mt-2 mb-4">Não tem uma conta? <strong onclick="paginaCadastro()" class="cursor">Cadastre-se</strong></p>
             </div>
@@ -58,30 +67,47 @@
             <svg onclick="paginaHome()" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-x-square-fill exit" viewBox="0 0 16 16">
                 <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/>
             </svg>
-            <div class="d-flex bg-light justify-content-center flex-column cardLogCad m-auto col-8">
+            <div class="d-flex bg-light justify-content-center flex-column cardLogCad m-auto mt-4 mb-4 col-5">
                 
                 <div class="d-flex justify-content-center align-content-center position-relative">
                     <h1 class="font title link-secondary mt-5">Cadastre-se</h1>
                     
                 </div>
                 <div class="d-flex justify-content-around">
-                    <form class="d-flex  flex-column mt-4 col-5 ">
-                        <label for="Nome" class="font">Nome:</label>
-                        <input type="text" name="Nome" id="nome" class="ofert_email text-black">  
-                        <label for="Sobrenome" class="font ">Sobrenome:</label>
-                        <input type="text" name="Sobrenome" id="sobrenome" class="ofert_email text-black">
-                        <label for="email" class="font">Email:</label>
-                        <input type="email" name="email" id="Email" class="ofert_email text-black">
-                        <label for="Number" class="font ">Ceular:</label>
-                        <input type="tel" name="tel" id="celular" class="ofert_email text-black">
-                    </form>
-                    <form class="d-flex  flex-column mt-4 col-5 ">
-                        <label for="password" class="font ">Senha:</label>
-                        <input type="password" name="password" id="senha" class="ofert_email text-black">
-                        <label for="password" class="font">Confirme sua senha:</label>
-                        <input type="password" name="confirmSenha" id="confirmSenha" class="ofert_email text-black">
-                        <label for="Cep" class="font">CEP:</label>
-                        <input type="text" name="cep" id="cep" class="ofert_email text-black">
+                    <form class="d-flex  flex-column mt-4 col-8 ">
+                        <label for="Nome" class="font mb-2">Nome:</label>
+                        <input type="text" name="Nome" id="nome" class="ofert_email text-black mb-4">  
+                        <label for="Sobrenome" class="font mb-2">Sobrenome:</label>
+                        <input type="text" name="Sobrenome" id="sobrenome" class="ofert_email text-black mb-4">
+                        <label for="email" class="font mb-2">Email:</label>
+                        <input type="email" name="email" id="Email" class="ofert_email text-black mb-4">
+                        <label for="Number" class="font mb-2">Ceular:</label>
+                        <input type="tel" name="tel" id="celular" class="ofert_email text-black mb-4">
+                        <label for="password" class="font mb-2">Senha:</label>
+                        <input type="password" name="password" id="senha" class="ofert_email text-black mb-4">
+                        <label for="password" class="font mb-2">Confirme sua senha:</label>
+                        <input type="password" name="confirmSenha" id="confirmSenha" class="ofert_email text-black mb-4">
+                        <label for="Cep" class="font mb-2">CEP:</label>
+                        <input type="text" name="cep" id="cep" class="ofert_email text-black mb-4">
+                        <div class="ocult" id="cepOculto">
+                            <div class="d-flex flex-column">
+                                <label for="Cidade" class="font mb-2">Cidade:</label>
+                                <input type="text" id="cidade" class="ofert_email text-black mb-4">
+                                <label for="Logradouro" class="font mb-2">Logradouro:</label>
+                                <input type="text" name="logradouro" id="logradouro" class="ofert_email text-black mb-4">
+                                
+                                <div class="d-flex col-12 justify-content-between">
+                                    <div class="d-flex col-9 flex-column ">
+                                        <label for="Rua" class="font mb-2 text-black">Rua:</label>
+                                        <input type="text" name="Rua" id="rua" class="ofert_email text-black mb-4">
+                                    </div>
+                                    <div class="d-flex flex-column col-2">
+                                        <label for="numeroCasa:" class="font mb-2"> N°:</label>
+                                        <input type="text" name="cep" id="numeroCasa" class="ofert_email text-black mb-4">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="d-flex  justify-content-start pt-2">
                             <div class="d-flex flex-column justify-content-center">
                                 <input type="checkbox" name="termos" id="termos" class="">
@@ -91,7 +117,7 @@
                     </form>
                 </div>
                 <div class="d-flex col-12 justify-content-center mt-5">
-                    <button class="font btn btn-danger col-6 register">Continuar</button>
+                    <button class="font btn btn-danger col-6 register" id="cadastro">Continuar</button>
                 </div>
                 <p class="link-secondary text-center mt-2 mb-4">Já tem uma conta? <strong onclick="paginaLogin()" class="cursor">Login-in</strong></p>
             </div>
@@ -100,7 +126,7 @@
 
     <!--PAGINA PRINCIPAL-->
 
-    <div class="col" id="principalPage">
+    <div class="col ocult" id="principalPage">
         <header>
             <div class=" faixa"></div>
             <div class="d-flex justify-content-center p-3 container-fluid shadow">

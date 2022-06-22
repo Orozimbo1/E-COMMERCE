@@ -64,7 +64,6 @@ button{
 }
 
 .login {
-    height: 100%;
     width: 100%;
     background-image: linear-gradient(45deg, #fa8c8c,rgb(231, 84, 84),#fa8c8c);
 }
@@ -75,11 +74,11 @@ button{
 
 .cardLogCad{
     height: auto;
-    border-radius: 5%;
+    border-radius: 2%;
 }
 
 .exit{
-    position: absolute;
+    position: fixed;
     top: 5vh;
     left: 3vw;  
     height: 5vh;

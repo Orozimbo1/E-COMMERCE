@@ -1,6 +1,7 @@
 let ofert_email = document.getElementById("ofert_email")
 let principalPage = document.getElementById("principalPage")
 let pageLogin = document.getElementById("pageLogin")
+let login = document.getElementById("login")
 let pageRegister = document.getElementById("pageRegister")
 let pagePrincipalPerfil = document.getElementById("pagePrincipalPerfil")
 let pageCompras = document.getElementById("pageCompras")
@@ -30,6 +31,12 @@ function paginaLogin() {
     titlePage.innerHTML = "Login"
 }
 
+//Fazendo login//
+
+login.addEventListener("click", () => {
+    window.location.replace("http://127.0.0.1:5500/HTML/perfil.html");
+})
+
 //Redirecionando para a pagina de Cadastro
 
 function paginaCadastro(){
@@ -38,6 +45,10 @@ function paginaCadastro(){
     pageRegister.classList.remove("ocult")
     titlePage.innerHTML = "Cadastre-se"
 }
+
+cadastro.addEventListener("click", () => {
+    window.location.replace("http://127.0.0.1:5500/HTML/perfil.html");
+})
 
 // redirecionando para a pagina Principal
 
