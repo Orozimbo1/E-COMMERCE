@@ -1,8 +1,35 @@
+// Pagina Principal
+
+let titlePage = document.querySelector("title")
 let ofert_email = document.getElementById("ofert_email")
 let principalPage = document.getElementById("principalPage")
+
+// Pagina de Login
+
 let pageLogin = document.getElementById("pageLogin")
 let login = document.getElementById("login")
+let authEmail = document.getElementById("authEmail")
+let authPassword = document.getElementById("authPassword")
+let erroLogin = document.getElementById("erroLogin")
+
+// Pagina de Cadastro
+
 let pageRegister = document.getElementById("pageRegister")
+let nome = document.getElementById("nome")
+let sobrenome = document.getElementById("sobrenome")
+let email = document.getElementById("email")
+let celular = document.getElementById("celular")
+let senha = document.getElementById("senha")
+let confirmSenha = document.getElementById("confirmSenha")
+let erroConfirm = document.getElementById("erroConfirm")
+let cep = document.getElementById("cep")
+let termos = document.getElementById("termos")
+let cadastro = document.getElementById("cadastro")
+let inputCad = document.getElementsByClassName("inputCad")
+let campo = document.getElementsByClassName("campo")
+
+// Pagina de Perfil
+
 let pagePrincipalPerfil = document.getElementById("pagePrincipalPerfil")
 let pageCompras = document.getElementById("pageCompras")
 let pageProdutos = document.getElementById("pageProdutos")
@@ -10,8 +37,6 @@ let pageFavoritos = document.getElementById("pageFavoritos")
 let pagePagamento = document.getElementById("pagePagamento")
 let pageConfiguracoes = document.getElementById("pageConfiguracoes")
 let pageAjuda = document.getElementById("pageAjuda")
-
-let titlePage = document.querySelector("title")
 
 
 console.log("funcionando");
@@ -34,7 +59,11 @@ function paginaLogin() {
 //Fazendo login//
 
 login.addEventListener("click", () => {
-    window.location.replace("http://127.0.0.1:5500/HTML/perfil.html");
+    if(authEmail.value.length != 0 || authPassword.value.length != 0) {
+        window.location.replace("http://127.0.0.1:5500/HTML/perfil.html");  
+    }else {
+        erroLogin.classList.remove("ocult")
+    }
 })
 
 //Redirecionando para a pagina de Cadastro
@@ -46,8 +75,24 @@ function paginaCadastro(){
     titlePage.innerHTML = "Cadastre-se"
 }
 
+// Fazendo Cadastro
+
 cadastro.addEventListener("click", () => {
-    window.location.replace("http://127.0.0.1:5500/HTML/perfil.html");
+    for (let i = 0; i < inputCad.length; i++) {
+            
+        if(inputCad[i].value.length == 0){
+            inputCad[i].classList.remove("focus-0")
+            inputCad[i].focus()
+        }else{
+            inputCad[i].classList.add("focus-0")
+        }
+
+        if (termos.checked === true) { 
+        } else {
+          termos.focus()
+        }          
+    }
+    
 })
 
 // redirecionando para a pagina Principal

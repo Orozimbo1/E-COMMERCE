@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.campo{
+    font-size: 0.8em;
+    color: red;
+}
 
 .font{    
     font-family: 'Bebas Neue', "cursive";
@@ -105,8 +109,7 @@ a{
     text-decoration: none;
 }
 
-.ofert_email{
-    border: none;
+.input-quest{
     height: 6vh;
     background-color: #f7cfcf;
     color: rgba(20, 4, 4, 0.623);
@@ -114,7 +117,11 @@ a{
     padding-left: 1vw;
 }
 
-.ofert_email:focus{
+.focus-0{
+    border: none;
+}
+
+.focus-0:focus{
     outline: 0;
 }
 

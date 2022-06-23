@@ -23,7 +23,7 @@
 
     <!--PAGINA DE LOGIN-->
 
-    <div class=" vh-100" id="pageLogin">
+    <div class="ocult vh-100" id="pageLogin">
         <section class="login d-flex position-relative h-100">
             <svg onclick="paginaHome()" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-x-square-fill exit" viewBox="0 0 16 16" >
                 <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/>
@@ -37,9 +37,9 @@
                 <div class="d-flex justify-content-center">
                     <form class="d-flex  flex-column mt-4 mb-2 col-8">
                         <label for="email" class="font mb-2">Email:</label>
-                        <input type="email" name="email" id="authEmail" class="ofert_email col-12 text-black mb-4">
+                        <input type="email" name="email" id="authEmail" class="input-quest focus-0 col-12 text-black mb-4">
                         <label for="password" class="font mb-2">Password:</label>
-                        <input type="password" name="password" id="authPassword" class="ofert_email mb-2 text-black">
+                        <input type="password" name="password" id="authPassword" class="input-quest focus-0 mb-2 text-black">
                         <div class="ocult" id="erroLogin">
                             <div class="d-flex justify-content-center align-content-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle m-1 text-danger" viewBox="0 0 16 16">
@@ -62,7 +62,7 @@
 
     <!--PAGINA DE CADASTRO-->
 
-    <div class="ocult vh-100" id="pageRegister">
+    <div class=" vh-100" id="pageRegister">
         <section class="login d-flex position-relative">
             <svg onclick="paginaHome()" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-x-square-fill exit" viewBox="0 0 16 16">
                 <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/>
@@ -74,43 +74,107 @@
                     
                 </div>
                 <div class="d-flex justify-content-around">
-                    <form class="d-flex  flex-column mt-4 col-8 ">
-                        <label for="Nome" class="font mb-2">Nome:</label>
-                        <input type="text" name="Nome" id="nome" class="ofert_email text-black mb-4">  
-                        <label for="Sobrenome" class="font mb-2">Sobrenome:</label>
-                        <input type="text" name="Sobrenome" id="sobrenome" class="ofert_email text-black mb-4">
-                        <label for="email" class="font mb-2">Email:</label>
-                        <input type="email" name="email" id="Email" class="ofert_email text-black mb-4">
-                        <label for="Number" class="font mb-2">Ceular:</label>
-                        <input type="tel" name="tel" id="celular" class="ofert_email text-black mb-4">
-                        <label for="password" class="font mb-2">Senha:</label>
-                        <input type="password" name="password" id="senha" class="ofert_email text-black mb-4">
-                        <label for="password" class="font mb-2">Confirme sua senha:</label>
-                        <input type="password" name="confirmSenha" id="confirmSenha" class="ofert_email text-black mb-4">
-                        <label for="Cep" class="font mb-2">CEP:</label>
-                        <input type="text" name="cep" id="cep" class="ofert_email text-black mb-4">
+                    <form class="d-flex  flex-column mt-4 col-8 ">  
+                        <div class="d-fex row justify-content-between">
+                            <label for="Nome" class="font col-6 "><strong>*</strong> Nome:</label>
+                            <div class="col-6 ocult campo">
+                                <div class=" d-flex col-12 justify-content-end align-content-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"class="bi bi-info-circle m-1" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                    </svg>
+                                    <p>Campo obrigatório!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="text" name="Nome" id="nome" class="input-quest inputCad focus-0 text-black mt-2">  
+                        <div class="d-fex row justify-content-between"> 
+                            <label for="Sobrenome" class="font mt-4 col-6"><strong>*</strong> Sobrenome:</label>
+                            <div class="col-6 ocult campo mt-4">
+                                <div class=" d-flex col-12 justify-content-end align-content-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"class="bi bi-info-circle m-1" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                    </svg>
+                                    <p>Campo obrigatório!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="text" name="Sobrenome" id="sobrenome" class="input-quest inputCad focus-0 text-black mt-2">
+                        <div class="d-fex row justify-content-between">  
+                            <label for="email" class="font mt-4 col-6"><strong>*</strong> Email:</label>
+                            <div class="col-6 ocult campo mt-4">
+                                <div class=" d-flex col-12 justify-content-end align-content-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"class="bi bi-info-circle m-1" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                    </svg>
+                                    <p>Campo obrigatório!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="email" name="email" id="email" class="input-quest inputCad focus-0 text-black mt-2">
+                        <label for="Number" class="font mt-4">Ceular:</label>
+                        <input type="tel" name="tel" id="celular" class="input-quest focus-0 text-black mt-2">
+                        <div class="d-fex row justify-content-between">                             
+                        <label for="password" class="font mt-4 col-6"><strong>*</strong> Senha:</label>
+                            <div class="col-6 ocult campo mt-4">
+                                <div class=" d-flex col-12 justify-content-end align-content-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"class="bi bi-info-circle m-1" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                    </svg>
+                                    <p>Campo obrigatório!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="password" name="password" id="senha" class="input-quest inputCad focus-0 text-black mt-2">
+                        <div class="d-fex row justify-content-between"> 
+                            <label for="password" class="font mt-4 col-6"><strong>*</strong> Confirme sua senha:</label>
+                            <div class="col-6 ocult campo mt-4">
+                                <div class=" d-flex col-12 justify-content-end align-content-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"class="bi bi-info-circle m-1" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                    </svg>
+                                    <p>Campo obrigatório!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="password" name="confirmSenha" id="confirmSenha" class="input-quest inputCad focus-0 text-black mt-2 mb-2">
+                        <div class="ocult" id="erroConfirm">
+                            <div class="d-flex  align-content-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle mt-1 text-danger" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                  </svg>
+                                  <p class="ps-1 text-danger">A confirmação de senha não confere!</p>
+                            </div>
+                        </div>
+                        <label for="Cep" class="font mt-3">CEP:</label>
+                        <input type="text" name="cep" id="cep" class="input-quest focus-0 text-black mt-2">
                         <div class="ocult" id="cepOculto">
                             <div class="d-flex flex-column">
-                                <label for="Cidade" class="font mb-2">Cidade:</label>
-                                <input type="text" id="cidade" class="ofert_email text-black mb-4">
-                                <label for="Logradouro" class="font mb-2">Logradouro:</label>
-                                <input type="text" name="logradouro" id="logradouro" class="ofert_email text-black mb-4">
+                                <label for="Cidade" class="font mt-4">Cidade:</label>
+                                <input type="text" id="cidade" class="input-quest focus-0 text-black mt-2">
+                                <label for="Logradouro" class="font mt-4">Logradouro:</label>
+                                <input type="text" name="logradouro" id="logradouro" class="input-quest focus-0 text-black mt-2">
                                 
                                 <div class="d-flex col-12 justify-content-between">
                                     <div class="d-flex col-9 flex-column ">
-                                        <label for="Rua" class="font mb-2 text-black">Rua:</label>
-                                        <input type="text" name="Rua" id="rua" class="ofert_email text-black mb-4">
+                                        <label for="Rua" class="font mt-4 text-black">Rua:</label>
+                                        <input type="text" name="Rua" id="rua" class="input-quest focus-0 text-black mt-2">
                                     </div>
                                     <div class="d-flex flex-column col-2">
-                                        <label for="numeroCasa:" class="font mb-2"> N°:</label>
-                                        <input type="text" name="cep" id="numeroCasa" class="ofert_email text-black mb-4">
+                                        <label for="numeroCasa:" class="font mt-4"> N°:</label>
+                                        <input type="text" name="cep" id="numeroCasa" class="input-quest focus-0 text-black mt-2">
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="d-flex  justify-content-start pt-2">
+                        <div class="d-flex  justify-content-start pt-5">
                             <div class="d-flex flex-column justify-content-center">
-                                <input type="checkbox" name="termos" id="termos" class="">
+                                <input type="checkbox" name="termos" id="termos" class="form-check-inline form-check-input">
                             </div>
                             <p class="link-secondary p-0 flex-wrap m-2">Li e concordo com os <a href="#" class="link-secondary"><strong>Termos de privacidade</strong></a></p>
                         </div>
@@ -193,7 +257,7 @@
             <div class="text-center col-4">
                 <ul>
                     <li class="text-white pb-3"><h4>Receba Ofertas</h4></li>
-                    <li><input type="text" class="ofert_email mb-2 shadow-lg col-10 text-center radius-0" value="Coloque seu email aqui" id="ofert_email"></li>
+                    <li><input type="text" class="input-quest focus-0 mb-2 shadow-lg col-10 text-center radius-0" value="Coloque seu email aqui" id="ofert_email"></li>
                     <li><button class="btn btn-danger register mb-3 col-10 pt-0 font radius-0">se increva</button></li>
                     <li><p class="text-white">&copy;2022 by Tera</p></li> 
                 </ul>    
