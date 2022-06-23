@@ -60,7 +60,7 @@ function paginaLogin() {
 
 login.addEventListener("click", () => {
     if(authEmail.value.length != 0 || authPassword.value.length != 0) {
-        window.location.replace("http://127.0.0.1:5500/HTML/perfil.html");  
+        paginaPerfil()  
     }else {
         erroLogin.classList.remove("ocult")
     }
@@ -78,12 +78,16 @@ function paginaCadastro(){
 // Fazendo Cadastro
 
 cadastro.addEventListener("click", () => {
-    for (let i = 0; i < inputCad.length; i++) {           
+    
+    for (let i = 0; i < inputCad.length; i++) {
+
         if(inputCad[i].value.length == 0){
             inputCad[i].classList.remove("focus-0")
             inputCad[i].focus()
+            campo[i].classList.remove("ocult")
         }else{
             inputCad[i].classList.add("focus-0")
+            campo[i].classList.add("ocult")
         }
 
         if (termos.checked === true) { 
@@ -93,6 +97,8 @@ cadastro.addEventListener("click", () => {
     }    
 })
 
+
+
 // redirecionando para a pagina Principal
 
 function paginaHome() {
@@ -100,6 +106,12 @@ function paginaHome() {
     pageLogin.classList.add("ocult")
     pageRegister.classList.add("ocult")
     titlePage.innerHTML = "OnlineShop"
+}
+
+//Redirecionando para a pagina de Perfil//
+
+function paginaPerfil() {
+    window.location.assign("http://127.0.0.1:5500/HTML/perfil.html")
 }
 
 //TOPICOS PAGINA DE PERFIL//
@@ -111,7 +123,7 @@ function paginaPerfilPrincipal() {
     pageFavoritos.classList.add("ocult")
     pagePagamento .classList.add("ocult")
     pageConfiguracoes.classList.add("ocult") 
-    pageAjuda.classList.add("ocult"     
+    pageAjuda.classList.add("ocult")    
 }
 
 function paginaCompras() {
