@@ -78,8 +78,7 @@ function paginaCadastro(){
 // Fazendo Cadastro
 
 cadastro.addEventListener("click", () => {
-    for (let i = 0; i < inputCad.length; i++) {
-            
+    for (let i = 0; i < inputCad.length; i++) {           
         if(inputCad[i].value.length == 0){
             inputCad[i].classList.remove("focus-0")
             inputCad[i].focus()
@@ -91,8 +90,7 @@ cadastro.addEventListener("click", () => {
         } else {
           termos.focus()
         }          
-    }
-    
+    }    
 })
 
 // redirecionando para a pagina Principal
@@ -113,8 +111,7 @@ function paginaPerfilPrincipal() {
     pageFavoritos.classList.add("ocult")
     pagePagamento .classList.add("ocult")
     pageConfiguracoes.classList.add("ocult") 
-    pageAjuda.classList.add("ocult")
-     
+    pageAjuda.classList.add("ocult"     
 }
 
 function paginaCompras() {
@@ -124,8 +121,7 @@ function paginaCompras() {
     pageFavoritos.classList.add("ocult")
     pagePagamento .classList.add("ocult")
     pageConfiguracoes.classList.add("ocult") 
-    pageAjuda.classList.add("ocult")
-     
+    pageAjuda.classList.add("ocult")     
 }
 
 function paginaProdutos() {
@@ -135,8 +131,7 @@ function paginaProdutos() {
     pageFavoritos.classList.add("ocult")
     pagePagamento .classList.add("ocult")
     pageConfiguracoes.classList.add("ocult") 
-    pageAjuda.classList.add("ocult")
-     
+    pageAjuda.classList.add("ocult")     
 }
 
 function paginaFavoritos() {
@@ -146,8 +141,7 @@ function paginaFavoritos() {
     pageFavoritos.classList.remove("ocult")
     pagePagamento .classList.add("ocult")
     pageConfiguracoes.classList.add("ocult") 
-    pageAjuda.classList.add("ocult")
-     
+    pageAjuda.classList.add("ocult")     
 }
 
 function paginaPagamento() {
@@ -157,8 +151,7 @@ function paginaPagamento() {
     pageFavoritos.classList.add("ocult")
     pagePagamento .classList.remove("ocult")
     pageConfiguracoes.classList.add("ocult") 
-    pageAjuda.classList.add("ocult")
-     
+    pageAjuda.classList.add("ocult")    
 }
 
 function paginaConfiguracoes() {
@@ -169,7 +162,6 @@ function paginaConfiguracoes() {
     pagePagamento .classList.add("ocult")
     pageConfiguracoes.classList.remove("ocult") 
     pageAjuda.classList.add("ocult")
-     
 }
 
 function paginaAjuda() {
@@ -179,6 +171,5 @@ function paginaAjuda() {
     pageFavoritos.classList.add("ocult")
     pagePagamento .classList.add("ocult")
     pageConfiguracoes.classList.add("ocult") 
-    pageAjuda.classList.remove("ocult")
-     
+    pageAjuda.classList.remove("ocult")     
 }
