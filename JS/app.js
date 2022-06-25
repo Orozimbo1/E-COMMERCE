@@ -30,6 +30,12 @@ let campo = document.getElementsByClassName("campo")
 
 console.log("funcionando");
 
+//Redirecionando para a pagina de Perfil//
+
+function paginaPerfil() {
+    window.location.assign("http://127.0.0.1:5500/HTML/perfil.html")
+}
+
 //zerando valor no campo de email
 
 ofert_email.addEventListener("click", () => {
@@ -48,7 +54,7 @@ function paginaLogin() {
 //Fazendo login//
 
 login.addEventListener("click", () => {
-    if(authEmail.value.length != 0 || authPassword.value.length != 0) {
+    if(authEmail.value.length != 0 && authPassword.value.length != 0) {
         paginaPerfil()  
     }else {
         erroLogin.classList.remove("ocult")
@@ -77,13 +83,13 @@ cadastro.addEventListener("click", () => {
         }else{
             inputCad[i].classList.add("focus-0")
             campo[i].classList.add("ocult")
-        }
-
-        if (termos.checked === true) { 
-        } else {
-          termos.focus()
         }          
-    }    
+    }   
+
+    if (termos.checked === true) { 
+    } else {
+      termos.focus()
+    } 
 })
 
 // redirecionando para a pagina Principal
