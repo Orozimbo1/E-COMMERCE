@@ -28,17 +28,6 @@ let cadastro = document.getElementById("cadastro")
 let inputCad = document.getElementsByClassName("inputCad")
 let campo = document.getElementsByClassName("campo")
 
-// Pagina de Perfil
-
-let pagePrincipalPerfil = document.getElementById("pagePrincipalPerfil")
-let pageCompras = document.getElementById("pageCompras")
-let pageProdutos = document.getElementById("pageProdutos")
-let pageFavoritos = document.getElementById("pageFavoritos")
-let pagePagamento = document.getElementById("pagePagamento")
-let pageConfiguracoes = document.getElementById("pageConfiguracoes")
-let pageAjuda = document.getElementById("pageAjuda")
-
-
 console.log("funcionando");
 
 //zerando valor no campo de email
@@ -75,7 +64,7 @@ function paginaCadastro(){
     titlePage.innerHTML = "Cadastre-se"
 }
 
-// Fazendo Cadastro
+//Fazendo Cadastro//
 
 cadastro.addEventListener("click", () => {
     
@@ -97,8 +86,6 @@ cadastro.addEventListener("click", () => {
     }    
 })
 
-
-
 // redirecionando para a pagina Principal
 
 function paginaHome() {
@@ -106,82 +93,4 @@ function paginaHome() {
     pageLogin.classList.add("ocult")
     pageRegister.classList.add("ocult")
     titlePage.innerHTML = "OnlineShop"
-}
-
-//Redirecionando para a pagina de Perfil//
-
-function paginaPerfil() {
-    window.location.assign("http://127.0.0.1:5500/HTML/perfil.html")
-}
-
-//TOPICOS PAGINA DE PERFIL//
-
-function paginaPerfilPrincipal() {
-    pagePrincipalPerfil.classList.remove("ocult")
-    pageCompras.classList.add("ocult")
-    pageProdutos.classList.add("ocult") 
-    pageFavoritos.classList.add("ocult")
-    pagePagamento .classList.add("ocult")
-    pageConfiguracoes.classList.add("ocult") 
-    pageAjuda.classList.add("ocult")    
-}
-
-function paginaCompras() {
-    pagePrincipalPerfil.classList.add("ocult")
-    pageCompras.classList.remove("ocult")
-    pageProdutos.classList.add("ocult") 
-    pageFavoritos.classList.add("ocult")
-    pagePagamento .classList.add("ocult")
-    pageConfiguracoes.classList.add("ocult") 
-    pageAjuda.classList.add("ocult")     
-}
-
-function paginaProdutos() {
-    pagePrincipalPerfil.classList.add("ocult")
-    pageCompras.classList.add("ocult")
-    pageProdutos.classList.remove("ocult") 
-    pageFavoritos.classList.add("ocult")
-    pagePagamento .classList.add("ocult")
-    pageConfiguracoes.classList.add("ocult") 
-    pageAjuda.classList.add("ocult")     
-}
-
-function paginaFavoritos() {
-    pagePrincipalPerfil.classList.add("ocult")
-    pageCompras.classList.add("ocult")
-    pageProdutos.classList.add("ocult") 
-    pageFavoritos.classList.remove("ocult")
-    pagePagamento .classList.add("ocult")
-    pageConfiguracoes.classList.add("ocult") 
-    pageAjuda.classList.add("ocult")     
-}
-
-function paginaPagamento() {
-    pagePrincipalPerfil.classList.add("ocult")
-    pageCompras.classList.add("ocult")
-    pageProdutos.classList.add("ocult") 
-    pageFavoritos.classList.add("ocult")
-    pagePagamento .classList.remove("ocult")
-    pageConfiguracoes.classList.add("ocult") 
-    pageAjuda.classList.add("ocult")    
-}
-
-function paginaConfiguracoes() {
-    pagePrincipalPerfil.classList.add("ocult")
-    pageCompras.classList.add("ocult")
-    pageProdutos.classList.add("ocult") 
-    pageFavoritos.classList.add("ocult")
-    pagePagamento .classList.add("ocult")
-    pageConfiguracoes.classList.remove("ocult") 
-    pageAjuda.classList.add("ocult")
-}
-
-function paginaAjuda() {
-    pagePrincipalPerfil.classList.add("ocult")
-    pageCompras.classList.add("ocult")
-    pageProdutos.classList.add("ocult") 
-    pageFavoritos.classList.add("ocult")
-    pagePagamento .classList.add("ocult")
-    pageConfiguracoes.classList.add("ocult") 
-    pageAjuda.classList.remove("ocult")     
 }
