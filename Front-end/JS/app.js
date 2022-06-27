@@ -24,7 +24,6 @@ let confirmSenha = document.getElementById("confirmSenha")
 let erroConfirm = document.getElementById("erroConfirm")
 let cep = document.getElementById("cep")
 let termos = document.getElementById("termos")
-let cadastro = document.getElementById("cadastro")
 let inputCad = document.getElementsByClassName("inputCad")
 let campo = document.getElementsByClassName("campo")
 
@@ -35,6 +34,12 @@ console.log("funcionando");
 ofert_email.addEventListener("click", () => {
     ofert_email.value = ""
 })
+
+//Redirecionando para a pagina de Perfil//
+
+function paginaPerfil() {
+    window.location.replace("http://127.0.0.1:5500/Front-end/HTML/perfil.html")
+}
 
 //Redirecionando pra a pagina de Login
 
@@ -47,15 +52,55 @@ function paginaLogin() {
 
 //Fazendo login//
 
-login.addEventListener("click", () => {
-    if(authEmail.value.length != 0 || authPassword.value.length != 0) {
-        paginaPerfil()  
-    }else {
+login.addEventListener("click", function() {
+    
+    if(authEmail.value.length == 0 && authPassword.value.length == 0){
         erroLogin.classList.remove("ocult")
     }
+    
+    const data = dataLogin()
+    console.log(data)
+    const url = "http://localhost:3000/auth"
+    
+    const getUserAll = () => {
+        fetch(`${url}/get`)
+        .then((response) => {
+            return response.json()
+            .then((data) => {
+                return console.log(data)
+            })
+        })
+        .catch((e) => {
+            return console.error(e)
+        })
+    }
+
+    getUserAll()    
+
+    // fetch(`${url}/login`, {
+    //     method: "POST",
+    //     body: JSON.stringify(data),
+    //     headers: {
+    //         "Content-Type": "application/json"
+    //     },
+    //     credentials: "same-origin"
+    // })
+    //     .then((response) => {
+    //         // window.location.href = "../HTML/perfil.html"
+    //     })
+    //     .catch((e) => {
+    //         return console.error(e)
+    //     })
 })
 
-//Redirecionando para a pagina de Cadastro
+const dataLogin = () => {
+    return {
+        "email": authEmail.value,
+        "password": authPassword.value
+    }
+}
+
+// Redirecionando para a pagina de Cadastro
 
 function paginaCadastro(){
     principalPage.classList.add("ocult")
@@ -64,7 +109,55 @@ function paginaCadastro(){
     titlePage.innerHTML = "Cadastre-se"
 }
 
-//Fazendo Cadastro//
+//FAZENDO CADASTRO
+
+const init = () => {
+    document.getElementById("cadastro").addEventListener("click", submitform);
+}
+
+const submitform = (e) => {
+    e.preventDefault();
+
+    const data = accessData()
+    console.log(data)    
+    const url = "http://localhost:3000/auth"
+
+    if(!data) {
+        return
+    }
+
+    fetch(`${url}/register`, {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+            "Content-Type": "application/json"
+        },
+        credentials: "same-origin"
+    })
+        .then((response) => {
+            window.location.href = "../HTML/perfil.html"
+            return alert("Cadastro realizado com sucesso!")
+        })
+        .catch((e) => {
+            return console.error(e)
+        })
+}
+
+const accessData = () => {
+    return{
+        "name": nome.value,
+        "sobrenome": sobrenome.value,
+        "email": email.value,
+        "celular": celular.value,
+        "password": senha.value,
+        "cep": cep.value
+    }
+
+}
+
+init()
+
+//Checando input Cadastro
 
 cadastro.addEventListener("click", () => {
     
