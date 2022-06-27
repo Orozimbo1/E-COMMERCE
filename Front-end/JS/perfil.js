@@ -11,12 +11,6 @@ let salvarDadosPerfil = document.getElementById("salvarDadosPerfil")
 
 console.log("funcionando")
 
-//Redirecionando para a pagina de Perfil//
-
-function paginaPerfil() {
-    window.location.assign("http://127.0.0.1:5500/HTML/perfil.html")
-}
-
 //TOPICOS PAGINA DE PERFIL//
 
 //Perfil//
